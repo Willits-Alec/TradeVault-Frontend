@@ -1,4 +1,8 @@
-<div *ngFor="let sale of sales">
-    <p>{{ sale.itemName }}: {{ sale.quantity }}</p>
-  </div>
-  
+<div>
+  <h2>Sales List</h2>
+  <ul>
+    <li *ngFor="let sale of sales">
+      {{ sale.itemName }} - {{ sale.quantity }} - {{ sale.profit }}
+    </li>
+  </ul>
+</div>
