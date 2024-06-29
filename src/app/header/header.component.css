@@ -1,19 +1,22 @@
 header {
-    background-color: #333;
-    padding: 10px 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Updated gradient */
+    padding: 15px 0;
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
   }
   
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 30px; /* Increased padding for a more spacious feel */
   }
   
   .navbar-brand {
     color: white;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 28px; /* Slightly larger font size */
+    font-weight: bold; /* Added bold for emphasis */
   }
   
   .navbar-nav {
@@ -24,16 +27,40 @@ header {
   }
   
   .nav-item {
-    margin-left: 20px;
+    margin-left: 25px; /* Increased margin for more space between items */
   }
   
   .nav-link {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
   }
   
   .nav-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #ffcb05; /* Changed hover color for contrast */
+  }
+  
+  .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffcb05; /* Underline effect on hover */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px; /* Positioned below the text */
+    left: 0;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%; /* Expands underline on hover */
+  }
+  
+  .active {
+    font-weight: bold;
+    color: #ffcb05; /* Active link color */
   }
   
