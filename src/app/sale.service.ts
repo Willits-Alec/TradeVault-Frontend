@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from './environments/environment';
+import { Sale } from './sale.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,19 +12,24 @@ export class SaleService {
 
   constructor(private http: HttpClient) {}
 
-  getSales(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/sales`);
+  getSales(): Observable<Sale[]> {
+    return this.http.get<Sale[]>(`${this.apiUrl}/sales`);
   }
 
-  addSale(sale: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/sales`, sale);
+  addSale(sale: Sale): Observable<Sale> {
+    return this.http.post<Sale>(`${this.apiUrl}/sales`, sale);
   }
 
-  updateSale(id: string, sale: any): Observable<any> {
-    return this.http.put(`${this.apiUrl}/sales/${id}`, sale);
+  updateSale(id: string, sale: Sale): Observable<Sale> {
+    return this.http.put<Sale>(`${this.apiUrl}/sales/${id}`, sale);
   }
 
-  deleteSale(id: string): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/sales/${id}`);
+  deleteSale(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/sales/${id}`);
   }
 }
+
+
+
+
+

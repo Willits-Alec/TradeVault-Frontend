@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SaleService } from '../sale.service';
+import { Sale } from '../sale.model';
 
 @Component({
   selector: 'app-sale-list',
@@ -7,10 +8,9 @@ import { SaleService } from '../sale.service';
   styleUrls: ['./sale-list.component.css']
 })
 export class SaleListComponent implements OnInit {
+  sales: Sale[] = [];
 
-  sales: any[] = [];
-
-  constructor(private saleService: SaleService) { }
+  constructor(private saleService: SaleService) {}
 
   ngOnInit(): void {
     this.saleService.getSales().subscribe(

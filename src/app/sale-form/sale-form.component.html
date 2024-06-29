@@ -1,1 +1,39 @@
-<p>sale-form works!</p>
+<div class="sale-form-container">
+    <h2>Enter Sale</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="itemName">Item Name</label>
+        <input type="text" id="itemName" [(ngModel)]="sale.itemName" name="itemName" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" [(ngModel)]="sale.quantity" name="quantity" required>
+      </div>
+      <div class="form-group">
+        <label for="costPerItem">Cost Per Item</label>
+        <input type="number" id="costPerItem" [(ngModel)]="sale.costPerItem" name="costPerItem" required>
+      </div>
+      <div class="form-group">
+        <label for="sold">Sold Price</label>
+        <input type="number" id="sold" [(ngModel)]="sale.sold" name="sold" required>
+      </div>
+      <div class="form-group">
+        <label for="investment">Investment</label>
+        <input type="number" id="investment" [(ngModel)]="sale.investment" name="investment" required>
+      </div>
+      <div class="form-group">
+        <label for="soldFor">Sold For</label>
+        <input type="number" id="soldFor" [(ngModel)]="sale.soldFor" name="soldFor" required>
+      </div>
+      <div class="form-group">
+        <label for="taxPaid">Tax Paid</label>
+        <input type="number" id="taxPaid" [(ngModel)]="sale.taxPaid" name="taxPaid" required>
+      </div>
+      <div class="form-group">
+        <label for="profit">Profit</label>
+        <input type="number" id="profit" [(ngModel)]="sale.profit" name="profit" required>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+  

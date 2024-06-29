@@ -1,8 +1,31 @@
-<div>
+<div class="sale-list-container">
   <h2>Sales List</h2>
-  <ul>
-    <li *ngFor="let sale of sales">
-      {{ sale.itemName }} - {{ sale.quantity }} - {{ sale.profit }}
-    </li>
-  </ul>
+  <table class="sale-table">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Quantity</th>
+        <th>Cost Per Item</th>
+        <th>Sold Price</th>
+        <th>Investment</th>
+        <th>Sold For</th>
+        <th>Tax Paid</th>
+        <th>Profit</th>
+        <th>Date Entered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sale of sales" class="sale-item">
+        <td>{{ sale.itemName }}</td>
+        <td>{{ sale.quantity }}</td>
+        <td>{{ sale.costPerItem }}</td>
+        <td>{{ sale.sold }}</td>
+        <td>{{ sale.investment }}</td>
+        <td>{{ sale.soldFor }}</td>
+        <td>{{ sale.taxPaid }}</td>
+        <td>{{ sale.profit }}</td>
+        <td>{{ sale.dateEntered | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
