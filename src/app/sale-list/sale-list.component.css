@@ -25,3 +25,59 @@
     background-color: #f1f1f1;
   }
   
+  .sale-list-container {
+    margin: 20px;
+  }
+  
+  .sale-list-container h2 {
+    color: #1e3c72; /* Matching header color */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center align the header */
+  }
+  
+  .sale-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better appearance */
+  }
+  
+  .sale-table th,
+  .sale-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sale-table th {
+    background-color: #2a5298; /* Matching header gradient end color */
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0; /* Sticky header */
+    z-index: 1; /* Ensure header stays above other content */
+  }
+  
+  .sale-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors for readability */
+  }
+  
+  .sale-table tbody tr:hover {
+    background-color: #f1f1f1; /* Hover effect for rows */
+  }
+  
+  .sale-table tbody .sale-item td {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .sale-table tbody .sale-item td:last-child {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .sale-table tbody .sale-item td:first-child {
+    font-weight: bold;
+    width: 400px; /* Set a larger width for the first column */
+  }
+  
