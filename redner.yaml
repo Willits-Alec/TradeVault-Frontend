@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: tradevault-frontend
+    env: static
+    staticPublishPath: dist/trade-vault-frontend
+    buildCommand: npm install && npm run build
+    publishCommand: cp -r dist/trade-vault-frontend/* /public
