@@ -3,5 +3,4 @@ services:
     name: tradevault-frontend
     env: static
     staticPublishPath: dist/trade-vault-frontend
-    buildCommand: npm install && npm run build
-    publishCommand: npm run build
+    buildCommand: npm install && ng build --configuration production
