@@ -9,6 +9,8 @@ import { SaleFormComponent } from './sale-form/sale-form.component';
 import { SaleListComponent } from './sale-list/sale-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { EditSaleComponent } from './edit-sale/edit-sale.component';
+import { SearchSaleComponent } from './search-sale/search-sale.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './footer/footer.component';
     SaleFormComponent,
     SaleListComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    EditSaleComponent,
+    SearchSaleComponent
   ],
   imports: [
     BrowserModule,

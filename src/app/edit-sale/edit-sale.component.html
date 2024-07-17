@@ -1,0 +1,63 @@
+<div class="sale-edit-container">
+    <h2>Edit Sale</h2>
+    <form (ngSubmit)="onSubmit()">
+      <table class="sale-table">
+        <tr>
+          <td><label for="itemName">Item Name</label></td>
+          <td>
+            <input type="text" id="itemName" [(ngModel)]="sale.itemName" name="itemName" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="quantity">Quantity</label></td>
+          <td>
+            <input type="number" id="quantity" [(ngModel)]="sale.quantity" name="quantity" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="costPerItem">Cost Per Item</label></td>
+          <td>
+            <input type="number" id="costPerItem" [(ngModel)]="sale.costPerItem" name="costPerItem" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="sold">Sold Price</label></td>
+          <td>
+            <input type="number" id="sold" [(ngModel)]="sale.sold" name="sold" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="investment">Investment</label></td>
+          <td>
+            <input type="number" id="investment" [(ngModel)]="sale.investment" name="investment" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="soldFor">Sold For</label></td>
+          <td>
+            <input type="number" id="soldFor" [(ngModel)]="sale.soldFor" name="soldFor" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="taxPaid">Tax Paid</label></td>
+          <td>
+            <input type="number" id="taxPaid" [(ngModel)]="sale.taxPaid" name="taxPaid" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="profit">Profit</label></td>
+          <td>
+            <input type="number" id="profit" [(ngModel)]="sale.profit" name="profit" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="dateEntered">Date Entered</label></td>
+          <td>
+            <input type="date" id="dateEntered" [(ngModel)]="sale.dateEntered" name="dateEntered" required />
+          </td>
+        </tr>
+      </table>
+      <button type="submit" class="btn">Update Sale</button>
+    </form>
+  </div>
+  

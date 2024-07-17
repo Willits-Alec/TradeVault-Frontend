@@ -1,3 +1,4 @@
+<!-- sale-list.component.html -->
 <div class="sale-list-container">
   <h2>Sales List</h2>
   <table class="sale-table">
@@ -12,6 +13,7 @@
         <th>Tax Paid</th>
         <th>Profit</th>
         <th>Date Entered</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +27,11 @@
         <td>{{ sale.taxPaid }}</td>
         <td>{{ sale.profit }}</td>
         <td>{{ sale.dateEntered | date:'short' }}</td>
+        <td>
+          <button (click)="onEdit(sale)">Edit</button>
+          <button (click)="onDelete(sale._id)">Delete</button>
+
+        </td>
       </tr>
     </tbody>
   </table>

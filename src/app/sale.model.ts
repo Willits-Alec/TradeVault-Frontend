@@ -1,5 +1,6 @@
+// sale.model.ts
 export interface Sale {
-    id?: string;
+    _id?: string;
     itemName: string;
     quantity: number;
     costPerItem: number;
