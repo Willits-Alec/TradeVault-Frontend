@@ -1,5 +1,6 @@
+// environment.prod.ts
 export const environment = {
     production: true,
-    apiUrl: 'https://tradevault-backend.onrender.com'
+    apiUrl: 'http://localhost:3000'
   };
   
